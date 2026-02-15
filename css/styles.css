@@ -235,3 +235,336 @@ button {
     padding: 24px 0;
   }
 }
+/* HERO SECTION */
+
+/* #region HERO */
+.main-page {
+  background-color: #2e2f42;
+
+  padding: 72px 0;
+  max-width: 320px;
+  min-height: 432px;
+
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    image-set(
+      url(../images/hero-image-m.jpg) 1x,
+      url(../images/hero-image-m@2x.jpg) 2x
+    );
+}
+.main-page .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page-text {
+  font-weight: 700;
+  font-size: 36px;
+  color: #fff;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  max-width: 216px;
+  margin-bottom: 72px;
+}
+
+.main-page-button {
+  background-color: #4d5ae5;
+  padding: 16px 32px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-page-button:hover,
+.main-page-button:focus {
+  background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .main-page {
+    max-width: 768px;
+    min-height: 436px;
+    padding: 112px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      image-set(
+        url(../images/hero-image-t.jpg) 1x,
+        url(../images/hero-image-t@2x.jpg) 2x
+      );
+  }
+
+  .main-page-text {
+    font-size: 56px;
+    max-width: 496px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .main-page {
+    max-width: 1440px;
+    min-height: 600px;
+    padding: 188px 0;
+
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      image-set(
+        url(../images/hero-image.jpg) 1x,
+        url(../images/hero-image@2x.jpg) 2x
+      );
+  }
+
+  .main-page-text {
+    margin-bottom: 48px;
+  }
+}
+
+/* #endregion HERO */
+
+/* #region FEATURES */
+
+.icon {
+  display: none;
+}
+
+.features {
+  padding: 96px 0;
+}
+
+.features-items {
+  display: flex;
+  row-gap: 72px;
+  flex-wrap: wrap;
+}
+
+.features-items-title {
+  font-weight: 700;
+  font-size: 36px;
+  color: #2e2f42;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.features-describe {
+  color: #434455;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .features-items {
+    column-gap: 24px;
+  }
+
+  .features-items li {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .features-items-title {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .icon {
+    display: block;
+  }
+  .features {
+    padding: 120px 0;
+  }
+
+  .features-items {
+    flex-wrap: nowrap;
+  }
+
+  .features-items li {
+    width: calc((100% - (24px * 3)) / 4);
+  }
+  .features-icon {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 8px;
+  }
+
+  .features-items-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .features-describe {
+    font-weight: 400;
+  }
+}
+
+/* #endregion  FEATURES */
+
+/* mobile MENU */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu-container {
+  position: relative;
+
+  padding-top: 72px;
+  padding-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* close-button */
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  line-height: 0;
+  width: 24px;
+  height: 24px;
+  outline: none;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+  background-color: #404bbf;
+}
+
+.mobile-menu-close:hover .icon-close,
+.mobile-menu-close:focus .icon-close {
+  fill: #fff;
+  border: none;
+}
+
+/* mobile-navigation */
+.mobile-menu-nav {
+  margin-bottom: auto;
+}
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-menu-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  color: #404bbf;
+}
+
+.mobile-menu-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.mobile-menu-contacts-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-contacts-link:hover,
+.mobile-menu-contacts-link:focus {
+  color: #4d5ae5;
+}
+
+.mobile-menu-social {
+  display: flex;
+  gap: 40px;
+}
+.mobile-menu-social-item {
+  flex-basis: calc((100% - 120px) / 4);
+}
+.mobile-menu-social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-social-link:hover,
+.mobile-menu-social-link:focus {
+  background-color: #404bbf;
+}
+.mobile-menu-social-icon {
+  fill: #f4f4fd;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
