@@ -653,20 +653,6 @@ button {
   justify-content: center;
 }
 
-.footer-icon-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-
-.subscribe {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-
 .footer-logo {
   font-size: 18px;
   font-weight: 700;
@@ -682,6 +668,13 @@ button {
 
 .footer-description {
   color: #f4f4fd;
+}
+
+.footer-icon-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
 .icon-title {
@@ -711,6 +704,13 @@ button {
 .footer-icon-link:hover,
 .footer-icon-link:focus {
   background-color: #31d0aa;
+}
+
+.subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
 .sub-title {
@@ -794,15 +794,6 @@ button {
     margin: 0 auto;
     padding: 0 16px;
   }
-  .footer-icon-box {
-    align-content: flex-start;
-    justify-content: flex-start;
-  }
-
-  .subscribe {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
 
   .footer-text-box {
     max-width: 264px;
@@ -810,8 +801,19 @@ button {
   }
 
   .footer-icon-box {
+    align-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  .footer-icon-box {
     max-width: 208px;
   }
+
+  .subscribe {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
   .form-sub-input {
     width: 264px;
     margin-bottom: 0;
@@ -939,6 +941,9 @@ button {
   color: #2e2f42;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.accent {
+  color: #404bbf;
+}
 
 .mobile-menu-link:hover,
 .mobile-menu-link:focus {
@@ -962,6 +967,10 @@ button {
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.accent-tel {
+  color: #4d5ae5;
+}
+
 .mobile-menu-contacts-link:hover,
 .mobile-menu-contacts-link:focus {
   color: #4d5ae5;
