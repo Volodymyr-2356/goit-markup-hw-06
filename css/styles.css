@@ -642,7 +642,7 @@ button {
 .footer-box {
   display: flex;
   flex-wrap: wrap;
-  gap: 72px;
+  row-gap: 72px;
 }
 
 .footer-text-box {
@@ -750,6 +750,7 @@ button {
   line-height: 2;
   letter-spacing: 0.04em;
   opacity: 0.6;
+  padding: 8px 16px;
 }
 
 .form-sub-button {
@@ -777,6 +778,53 @@ button {
 .icon-send {
   fill: #fff;
 }
+
+@media screen and (min-width: 768px) {
+    .container.footer-cont {
+      max-width: 584px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .footer-box {
+      align-content: flex-start;
+      column-gap: 24px;
+    }
+    .footer-icon-box {
+      align-content: flex-start;
+      justify-content: flex-start;
+    }
+
+    .subscribe {
+      flex-direction: column;
+      flex-wrap: nowrap;
+     
+    }
+
+
+  .footer-text-box {
+    max-width: 264px;
+    justify-content: flex-start;
+  }
+
+.footer-icon-box {
+  max-width: 208px;
+} 
+.form-sub-input {
+
+  width: 264px;
+  margin-bottom: 0;
+  margin-right: 24px;
+
+}
+.form-sub {
+  display:flex;
+ 
+  
+}
+}
+
+
 
 /* #endregion FOOTER */
 /* mobile MENU */
