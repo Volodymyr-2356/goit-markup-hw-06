@@ -453,6 +453,7 @@ button {
 
 .team-link {
   background-color: #fff;
+  max-width: 264px;
 
   border-radius: 0 0 4px 4px;
   box-shadow:
